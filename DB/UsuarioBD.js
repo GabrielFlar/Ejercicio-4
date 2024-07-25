@@ -43,7 +43,7 @@ class UsuarioBD extends ConectarBD{
         }
     }
     async actualizarUsuario(usuario){
-        const sql="UPDATE FROM usuarios SET nombre='"+usuario.nombre+"', celular='"+usuario.celular+"', correo='"+usuario.correo+"' WHERE idusuario="+usuario.idUsuario;
+        const sql="UPDATE FROM usuarios SET nombre='"+usuario.nombre+"', celular='"+usuario.celular+"', correo='"+usuario.correo+"' WHERE idusuario="+usuario.id;
         try {
             await this.conectarMySql();
             await this.conexion.execute(sql);
@@ -55,7 +55,7 @@ class UsuarioBD extends ConectarBD{
         }
     }
     async borrarUsuario(idUsuario){
-        const sql="DELETE FROM usuarios WHERE idusuario="+idUsuario;
+        const sql="DELETE FROM usuarios WHERE idusuario="+id;
         try {
             await this.conectarMySql();
             await this.conexion.execute(sql);
