@@ -22,13 +22,13 @@
                 usuariosBD.forEach(usuario => {
                 %>
                 <tr>
-                    <td><%= usuario.idusuario %></td>
+                    <td><%= usuario.id %></td>
                     <td><%= usuario.nombre %></td>
                     <td><%= usuario.correo %></td>
                     <td><%= usuario.celular %></td>
                     <td>
-                        <a href="/editarUsuario/<%= usuario.idusuario %>">Editar</a>
-                        <a href="/borrarUsuario/<%= usuario.idusuario %>">Borrar</a>
+                        <a href="/editarUsuario/<%= usuario.id %>">Editar</a>
+                        <a href="/borrarUsuario/<%= usuario.id %>">Borrar</a>
                     </td>
                 </tr>
                 <% 
