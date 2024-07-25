@@ -55,7 +55,7 @@ class UsuarioBD extends ConectarBD{
         }
     }
     async borrarUsuario(idUsuario){
-        const sql="DELETE FROM usuarios WHERE idusuario="+id;
+        const sql="DELETE FROM usuarios WHERE idusuario="+idUsuario;
         try {
             await this.conectarMySql();
             await this.conexion.execute(sql);
